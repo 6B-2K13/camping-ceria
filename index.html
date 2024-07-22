@@ -6,9 +6,8 @@
     <title>Camping Ceria</title>
     <link href="src/output.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="assets/image/logo.png" />
-
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <audio id="background-music" src="assets/image/membasuh.mp3" autoplay loop></audio>
+    <audio id="background-music" src="assets/image/Hindia.mp3"></audio>
   </head>
   <body class="bg-Dasar font-mono">
     <!-- HEADER START -->
@@ -47,13 +46,20 @@
     <!-- HOME -->
     <section id="home" class="flex items-center justify-center min-h-screen mt-10">
       <div class="container mx-auto">
-        <div class="flex justify-center mx-12 my-10">
+        <div class="flex justify-center mx-12 my-5">
           <img src="assets/image/home.png" alt="camp" class="w-full max-w-[600px] h-auto" />
         </div>
       </div>
     </section>
     <!-- END HOME -->
-
+    <div id="play-button" style="display: none; text-align: center" class="mb-32">
+      <button
+        onclick="document.getElementById('background-music').play(); this.style.display='none';"
+        style="padding: 10px 20px; background-color: #4caf50; color: white; border: none; border-radius: 5px"
+      >
+        Play Music
+      </button>
+    </div>
     <!-- CURHAT -->
     <section id="curhat" class="flex items-center justify-center">
       <div class="container mx-auto">
@@ -64,23 +70,6 @@
     </section>
     <!-- END CURHAT -->
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var options = {
-          strings: [
-            "Der.. ^500 Inget Kaga Kalo Dulu Saban Hari Ketemu, Saban Hari Maen Bareng?. ^500 Sekarang Mah Susah Ya Der, Boro Boro Ketemu Saban Hari, Sebulan Sekali aja Kayanya Kaga. ^500 Sekarang Mah Pada Sibuk Der, Ada Yang Sibuk Kuliah, Ada Yang Sibuk Kerja, Ada Juga Yang Sibuk Ngurus Keluarga. ^500 Dulumah Hampir Saban Hari Maen Bareng, Jajan Bareng, Ngobrol Bareng , Kadang Juga Tidur Bareng (Nginep Ya Bangsat, Bukan Yang Itu). ^500 Gua Tau Lu Pada Sekarang Pada Sibuk, Gua Doain Dah Supaya Apa Yang Lu Mau Semoga Terwujud. ^500 Cuman Lu Emang Kaga Pada Kangen Sama Suasana Dulu? Sama Temen Temen Lu Dulu?. ^500 Apa Lu Kangen Tapi Gengsi? ^500 Persetan Lah Dengan Gengsi, Lu Sekarang Mau Jadi Apa Aja Gua Kaga Peduli, Yang Gua Peduliin Lu Sehat, Bahagia. ^500 Gua Disini Cuman Mau Ngajak Buat Ngumpul Lagi, Ngobrol Bareng Lagi, sama Jajan Bareng Lagi. Ya Walaupun Mustahil Semuanya Bakalan Ikut. ^500 Cuman Sehari Der, Luangin Waktu Lu, Luangin Tenaga Lu. Cerita Sini Sama Temen Temen Lu, Gua Jamin Gk Mungkin Temen Lu Kaga Peduli. ^500 Dahlah Cape Ngetik Gua Anying!",
-          ],
-          typeSpeed: 40,
-          backSpeed: 40,
-          showCursor: true,
-          cursorChar: "",
-          startDelay: 500,
-        };
-
-        var typed = new Typed(".typed-output", options);
-      });
-    </script>
-
     <!-- Daftar -->
     <section id="daftar" class="flex items-center justify-center mt-10">
       <div class="container mx-auto">
@@ -88,7 +77,6 @@
           <h1 class="text-start font-semibold text-Dark text-lg">Nah Buat Lu Yang Mau Ikut, Daftar Dah Di Bawah Ini. <br /></h1>
           <h3 class="text-start font-semibold text-Dark text-lg">Kaga Punya Duit Tapi Pengen Ikut? Kalem Der Lu Bayar Semampu Lu Aja!, Tapi Kalo Ada Lebih Mah, Bisa Kali Lebihin</h3>
           <br />
-
           <h2 class="text-Hijau mb-10 mt-10 text-xl font-bold">
             <span> See You! 🤞</span>
           </h2>
@@ -176,7 +164,6 @@
 
       // Tampilkan hasil
       document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
       // Jika hitungan mundur selesai, tampilkan pesan
       if (distance < 0) {
         clearInterval(interval);
@@ -189,5 +176,51 @@
 
     // Panggil fungsi pertama kali untuk menampilkan hitungan mundur segera
     updateCountdown();
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var audio = document.getElementById("background-music");
+
+    // Fungsi untuk memulai pemutaran audio
+    function playAudio() {
+      var playPromise = audio.play();
+
+      if (playPromise !== undefined) {
+        playPromise
+          .then(function () {
+            // Automatic playback started!
+            console.log("Audio is playing");
+          })
+          .catch(function (error) {
+            // Auto-play was prevented
+            // Show a UI element to let the user manually start playback
+            console.log("Autoplay prevented:", error);
+            document.getElementById("play-button").style.display = "block"; // Menampilkan tombol play jika autoplay dicegah
+          });
+      }
+    }
+
+    // Tambahkan event listener untuk tombol play
+    document.getElementById("play-button").addEventListener("click", function () {
+      playAudio();
+    });
+
+    // Coba memutar audio secara otomatis
+    playAudio();
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var options = {
+      strings: [
+        "Der.. ^500 Inget Kaga Kalo Dulu Saban Hari Ketemu, Saban Hari Maen Bareng?. ^500 Sekarang Mah Susah Ya Der, Boro Boro Ketemu Saban Hari, Sebulan Sekali aja Kayanya Kaga. ^500 Sekarang Mah Pada Sibuk Der, Ada Yang Sibuk Kuliah, Ada Yang Sibuk Kerja, Ada Juga Yang Sibuk Ngurus Keluarga. ^500 Dulumah Hampir Saban Hari Maen Bareng, Jajan Bareng, Ngobrol Bareng , Kadang Juga Tidur Bareng (Nginep Ya Bangsat, Bukan Yang Itu). ^500 Gua Tau Lu Pada Sekarang Pada Sibuk, Gua Doain Dah Supaya Apa Yang Lu Mau Semoga Terwujud. ^500 Cuman Lu Emang Kaga Pada Kangen Sama Suasana Dulu? Sama Temen Temen Lu Dulu?. ^500 Apa Lu Kangen Tapi Gengsi? ^500 Persetan Lah Dengan Gengsi, Lu Sekarang Mau Jadi Apa Aja Gua Kaga Peduli, Yang Gua Peduliin Lu Sehat, Bahagia. ^500 Gua Disini Cuman Mau Ngajak Buat Ngumpul Lagi, Ngobrol Bareng Lagi, sama Jajan Bareng Lagi. Ya Walaupun Mustahil Semuanya Bakalan Ikut. ^500 Cuman Sehari Der, Luangin Waktu Lu, Luangin Tenaga Lu. Cerita Sini Sama Temen Temen Lu, Gua Jamin Gk Mungkin Temen Lu Kaga Peduli. ^500 Dahlah Cape Ngetik Gua Anying!",
+      ],
+      typeSpeed: 40,
+      backSpeed: 40,
+      showCursor: true,
+      cursorChar: "",
+      startDelay: 500,
+    };
+
+    var typed = new Typed(".typed-output", options);
   });
 </script>
