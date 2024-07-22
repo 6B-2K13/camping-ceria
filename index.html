@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camping Ceria</title>
+    <link rel="icon" type="image/png" href="dist/img/logo.png" />
+    <link href="src/output.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <audio id="background-music" src="/dist/img/membasuh.mp3" autoplay></audio>
+  </head>
+  <body class="bg-Dasar font-mono">
+    <!-- HEADER START -->
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-0">
+            <a href="#home" class="font-bold text-lg text-Hijau block py-6 px-10">Camping Ceria</a>
+          </div>
+          <div class="flex items-center px-4">
+            <button id="hamburger" name="humberger" type="button" class="block absolute right-4 lg:hidden">
+              <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+            </button>
+            <!--  -->
+            <nav id="navbar-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none">
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a href="#home" class="text-lg font-semibold text-Orange hover:text-Dark py-2 mx-8 flex group-hover:text-Hijau">Home</a>
+                </li>
+                <li class="group">
+                  <a href="#daftar" class="text-lg font-semibold text-Orange hover:text-Dark py-2 mx-8 flex group-hover:text-Hijau">Register</a>
+                </li>
+                <li class="group">
+                  <a href="#curhat" class="text-lg font-semibold text-Orange hover:text-Dark py-2 mx-8 flex group-hover:text-Hijau">Curhat</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- HEADER END -->
+
+    <!-- HOME -->
+    <section id="home" class="flex items-center justify-center min-h-screen mt-10">
+      <div class="container mx-auto">
+        <div class="flex justify-center mx-12 my-10">
+          <img src="/dist/img/home.png" alt="camp" class="w-full max-w-[600px] h-auto" />
+        </div>
+      </div>
+    </section>
+    <!-- END HOME -->
+
+    <!-- CURHAT -->
+    <section id="curhat" class="flex items-center justify-center">
+      <div class="container mx-auto">
+        <div class="flex justify-center mb-32">
+          <h1 class="text-start font-semibold text-Dark mx-20 text-lg typed-output"></h1>
+        </div>
+      </div>
+    </section>
+    <!-- END CURHAT -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var options = {
+          strings: [
+            "Der.. ^500 Inget Kaga Kalo Dulu Saban Hari Ketemu, Saban Hari Maen Bareng?. ^500 Sekarang Mah Susah Ya Der, Boro Boro Ketemu Saban Hari, Sebulan Sekali aja Kayanya Kaga. ^500 Sekarang Mah Pada Sibuk Der, Ada Yang Sibuk Kuliah, Ada Yang Sibuk Kerja, Ada Juga Yang Sibuk Ngurus Keluarga. ^500 Dulumah Hampir Saban Hari Maen Bareng, Jajan Bareng, Ngobrol Bareng , Kadang Juga Tidur Bareng (Nginep Ya Bangsat, Bukan Yang Itu). ^500 Gua Tau Lu Pada Sekarang Pada Sibuk, Gua Doain Dah Supaya Apa Yang Lu Mau Semoga Terwujud. ^500 Cuman Lu Emang Kaga Pada Kangen Sama Suasana Dulu? Sama Temen Temen Lu Dulu?. ^500 Apa Lu Kangen Tapi Gengsi? ^500 Persetan Lah Dengan Gengsi, Lu Sekarang Mau Jadi Apa Aja Gua Kaga Peduli, Yang Gua Peduliin Lu Sehat, Bahagia. ^500 Gua Disini Cuman Mau Ngajak Buat Ngumpul Lagi, Ngobrol Bareng Lagi, sama Jajan Bareng Lagi. Ya Walaupun Mustahil Semuanya Bakalan Ikut. ^500 Cuman Sehari Der, Luangin Waktu Lu, Luangin Tenaga Lu. Cerita Sini Sama Temen Temen Lu, Gua Jamin Gk Mungkin Temen Lu Kaga Peduli. ^500 Dahlah Cape Ngetik Gua Anying!",
+          ],
+          typeSpeed: 40,
+          backSpeed: 40,
+          showCursor: true,
+          cursorChar: "",
+          startDelay: 500,
+        };
+
+        var typed = new Typed(".typed-output", options);
+      });
+    </script>
+
+    <!-- Daftar -->
+    <section id="daftar" class="flex items-center justify-center mt-10">
+      <div class="container mx-auto">
+        <div class="justify-start mb-32 mx-20">
+          <h1 class="text-start font-semibold text-Dark text-lg">Nah Buat Lu Yang Mau Ikut, Daftar Dah Di Bawah Ini. <br /></h1>
+          <h3 class="text-start font-semibold text-Dark text-lg">Kaga Punya Duit Tapi Pengen Ikut? Kalem Der Lu Bayar Semampu Lu Aja!, Tapi Kalo Ada Lebih Mah, Bisa Kali Lebihin</h3>
+          <br />
+
+          <h2 class="text-Hijau mb-10 mt-10 text-xl font-bold">
+            <span> See You! 🤞</span>
+          </h2>
+          <!-- <p class="font-medium text-slate-400 mb-10 leading-relaxed">Belajar Web Programing itu mudah dan menyenangkan! Hah</p> -->
+          <a
+            href="https://forms.gle/5foiFXywHTJRMePQ7"
+            class="text-base font-semibold bg-Hijau py-3 text-white px-8 rounded-full hover:shadow-lg hover:bg-Dark hover:opacity-80 transition duration-300 ease-in-out"
+            target="_blank"
+            >Daftar</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- END Daftar -->
+
+    <!-- WAKTU -->
+    <section class="flex items-center justify-center mb-32">
+      <div class="container mx-auto">
+        <div class="flex justify-center mx-12 my-10">
+          <img src="/dist/img/waktu.png" alt="camp" class="w-full max-w-[600px] h-auto" />
+        </div>
+      </div>
+    </section>
+    <!-- END WAKTU -->
+    <!-- PAYMENT -->
+    <section class="flex items-center justify-center mb-32">
+      <div class="container mx-auto">
+        <div class="flex justify-center mx-12 my-10">
+          <img src="/dist/img/payment.png" alt="camp" class="w-full max-w-[600px] h-auto" />
+        </div>
+      </div>
+    </section>
+    <!-- END WAKTU -->
+
+    <!-- TIME -->
+    <section id="live" class="pt-36 mt-32">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap">
+          <div class="w-full text-center px-4 mb-20">
+            <!--  -->
+            <div class="items-end justify-end">
+              <h1 class="text-Dark text-2xl font-mono font-bold">Acara Akan Dimulai Dalam ✨:</h1>
+              <div id="countdown" class="text-4xl font-bold text-Hijau mt-4 font-mono"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-Hijau pt-24 pb-12 mt-40">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
+            <h2 class="font-bold text-2xl text-white mb-5">VI B 2K13 SQUAD</h2>
+            <p>bsix.2013@gmail.com</p>
+          </div>
+          <div class="w-full px-4 mb-12 md:w-1/3"></div>
+        </div>
+        <div class="w-full pt-10 border-t border-slate-700">
+          <div class="flex items-center justify-center mb-5"></div>
+          <p class="text-lg font-semibold text-Dark text-center">Dibuat oleh <a href="#home" class="font-bold text-Orange">VI B 2K13 SQUAD 🖐</a></p>
+        </div>
+      </div>
+    </footer>
+    <script src="dist/js/script.js"></script>
+  </body>
+</html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Tanggal dan waktu target
+    var targetDate = new Date("August 2, 2024 14:00:00").getTime();
+
+    // Fungsi untuk memperbarui hitungan mundur
+    function updateCountdown() {
+      var now = new Date().getTime();
+      var distance = targetDate - now;
+
+      // Hitung waktu untuk hari, jam, menit, dan detik
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Tampilkan hasil
+      document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+      // Jika hitungan mundur selesai, tampilkan pesan
+      if (distance < 0) {
+        clearInterval(interval);
+        document.getElementById("countdown").innerHTML = "The event has started!";
+      }
+    }
+
+    // Perbarui hitungan mundur setiap 1 detik
+    var interval = setInterval(updateCountdown, 1000);
+
+    // Panggil fungsi pertama kali untuk menampilkan hitungan mundur segera
+    updateCountdown();
+  });
+</script>
